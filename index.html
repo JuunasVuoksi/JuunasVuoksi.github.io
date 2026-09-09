@@ -31,9 +31,9 @@
     }
     const config = {
       arguments: [],
-      dataUrl: 'Build/Ravinteli_web.data.unityweb',
-      frameworkUrl: 'Build/Ravinteli_web.framework.js.unityweb',
-      codeUrl: 'Build/Ravinteli_web.wasm.unityweb',
+      dataUrl: 'Build/WebGL.data.unityweb',
+      frameworkUrl: 'Build/WebGL.framework.js.unityweb',
+      codeUrl: 'Build/WebGL.wasm.unityweb',
       streamingAssetsUrl: 'StreamingAssets',
       companyName: "Osteria del Sol",
       productName: "Restaurant Menu",
@@ -52,7 +52,7 @@
       else config.arguments.push('-osteriaPersistenceTest', mode);
     }
     const script = document.createElement('script');
-    script.src = 'Build/Ravinteli_web.loader.js';
+    script.src = 'Build/WebGL.loader.js';
     script.onerror = () => showError('Lataus epäonnistui. Avaa sovellus HTTP- tai HTTPS-palvelimelta ja tarkista verkkoyhteys.');
     script.onload = () => createUnityInstance(canvas, config, value => document.getElementById('progress').value = value)
       .then(instance => { window.osteriaInstance = instance; document.getElementById('loading').remove(); canvas.focus(); })
